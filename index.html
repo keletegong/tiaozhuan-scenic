@@ -3,11 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>跳转页面</title>
-  <script>
-    window.location.href = "https://guide.wysly.com/jszx/wap/open/play/scenic";
-  </script>
+  <title>嵌入页面</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
 </head>
 <body>
+  <iframe src="https://guide.wysly.com/jszx/wap/open/play/scenic" allowfullscreen></iframe>
 </body>
 </html>
