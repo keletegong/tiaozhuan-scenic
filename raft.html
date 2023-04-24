@@ -1,0 +1,166 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+<link rel="stylesheet" href="static/css/font-awesome.min.css">
+<link rel="stylesheet" href="static/css/mui.min.css">
+<link rel="stylesheet" href="static/css/mui.picker.min.css">
+<link rel="stylesheet" href="static/css/datepicker.css">
+<link rel="stylesheet" href="static/css/swiper.min.css">
+<link rel="stylesheet" href="static/css/wap-base.css">
+<link rel="stylesheet" href="static/css/weixin.css">
+    <title>武夷热度</title>
+</head>
+<body class="white-bg">
+<div id="main">
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">竹筏动态</h1>
+    </header>
+    <div class="mui-content ">
+        <div class="banner">
+            
+                
+                    <img src="static/picture/1583484211398xix.jpg">
+                
+            
+            
+        </div>
+        <div class="p20 white-bg mui-text-center">
+            <p class="f16 relative">
+                04月24日 23:08:00
+                <span class="refresh" onclick="window.location.reload();">刷新</span>
+            </p>
+            <p class="f16">景区竹筏票实时信息</p>
+        </div>
+        <div class="p10 white-bg no-padding-top">
+            <table class="zhufa-table">
+                <thead>
+                <tr>
+                    <th>趟次</th>
+                    <th>已售</th>
+                    <th>可售</th>
+                    <th>状态</th>
+                </tr>
+                </thead>
+                <tbody>
+                
+                    
+                    
+                        <tr>
+                            <td colspan="4" align="center">暂无数据</td>
+                        </tr>
+                    
+                
+                </tbody>
+            </table>
+        </div>
+        <div class="p10">
+            <p class="f16">温馨提示：</p>
+            <p class="gray">1.购票后请到竹筏验票大厅组拼。<br>2.当趟次单竹筏预订未满的情况下，在开排前20-40分钟开始销售，当趟竹筏时间提前半小时截止销售，售完即止。<br>3.为了配合您和他人的旅游安全，严禁带水枪、水瓢、捞网等乘坐竹筏，谢谢您的配合。</p>
+        </div>
+    </div>
+</div>
+
+<script src="static/js/jquery-2.1.1.min.js"></script>
+<script>
+    $('.goback').click(function () {
+        window.history.back();
+    });
+    var ctx = "/jszx";
+</script>
+
+<script src="static/js/mui.min.js"></script>
+<script src="static/js/mui.picker.min.js"></script>
+<script src="static/js/layer.js"></script>
+<script src="static/js/extension.js"></script>
+<script src="static/js/vue.min.js"></script>
+<script src="static/js/vue-infinite-scroll.js"></script>
+<script src="static/js/axios.min.js"></script>
+<script src="static/js/moment.min.js"></script>
+<script src="static/js/moment-precise-range.js"></script>
+<script src="static/js/js.cookie.min.js"></script>
+<script src="static/js/swiper.min.js"></script>
+<script src="static/js/lazysizes.min.js"></script>
+<script src="static/js/wap-common.js"></script>
+
+<script src="static/js/wechat-share.js"></script>
+<script src="static/js/jweixin-1.2.0.js"></script>
+
+
+<script>
+    var url = window.location.href;
+    if (url.indexOf("state=STATE") >= 0) {
+        var reg = /code=(.+)&/g;
+        url = url.replace(reg, "");
+        url = url.replace("state=STATE", "");
+        window.location.href = url;
+    }
+    /*微信分享数据*/
+    var ua = window.navigator.userAgent.toLowerCase();
+    if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+        var shareData = {};
+        shareData.title = "武夷山旅游集散中心";
+        shareData.desc = "武夷山旅游  新鲜的旅游资讯、好玩的旅行攻略、及时的出行提示，随时带您玩转武夷～";
+        shareData.img = "https://wys.zmyou.com/cdn/static/wap/img/share.png";
+        share(shareData);
+        $('header').css('display', 'block');
+    } else {
+        $('header').remove();
+        $('.mui-content').css("padding-top", "0px")
+    }
+    mui.back = function () {
+        if ("https://guide.wysly.com/jszx/wap/open/online/service/heat/raft" == "") {
+            try {
+                //APP
+                phone.backLastView();
+            } catch (e) {
+                window.location.href = "/jszx/wap/open/index";
+            }
+        } else {
+            window.history.back(-1);
+        }
+    };
+</script>
+
+<script>
+
+</script>
+
+
+<script>
+    var vm = new Vue({
+        el: '#main',
+        data: {},
+        methods: {}
+    });
+
+    
+
+    window.setInterval(function () {
+        if (moment().minute() % 5 == 0) {
+            window.location.reload()
+        }
+    }, 60000);
+</script>
+</body>
+</html>

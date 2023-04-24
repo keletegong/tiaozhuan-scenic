@@ -1,0 +1,146 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+<link rel="stylesheet" href="static/css/font-awesome.min.css">
+<link rel="stylesheet" href="static/css/mui.min.css">
+<link rel="stylesheet" href="static/css/mui.picker.min.css">
+<link rel="stylesheet" href="static/css/datepicker.css">
+<link rel="stylesheet" href="static/css/swiper.min.css">
+<link rel="stylesheet" href="static/css/wap-base.css">
+<link rel="stylesheet" href="static/css/weixin.css">
+    <title>武夷美宿</title>
+</head>
+<body class="white-bg">
+<div id="main">
+    <div class="mui-content white-bg">
+        <a class="mui-action-back mui-icon mui-icon-left-nav s-back"></a>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                
+                    <div class="swiper-slide"><img src="static/picture/1667235745671kzo.jpg" height="200px"></div>
+                
+                    <div class="swiper-slide"><img src="static/picture/1667235748084ahl.jpg" height="200px"></div>
+                
+            </div>
+            
+                <div class="swiper-pagination"></div>
+            
+        </div>
+
+        <div class="text-box text-box-radius">
+            <p class="pb10 border-bottom" style="font-size: 24pt">武夷山一同山居茶印象美学酒店</p>
+            <div>
+                <p><span style="color: rgb(51, 51, 51); font-family: Tahoma, Simsun, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);">&nbsp; &nbsp; &nbsp; <strong><span style="color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); font-size: 16px; font-family: 楷体, 楷体_GB2312, SimKai;">一同山居</span></strong><span style="background-color: rgb(255, 255, 255); font-size: 16px; font-family: 楷体, 楷体_GB2312, SimKai; color: rgb(112, 48, 160);">由雷恩设计团队历时四年精心构造，借大王峰之美景，勾勒山水灵感，属新中式之典范。</span></span></p><p><span style="color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); font-size: 16px; font-family: 楷体, 楷体_GB2312, SimKai;">&nbsp; &nbsp; 山居与印象大红袍剧场毗邻，曲径通幽之22间房，以“忘”字打头，在这里，忘山忘水忘远，可忘我也可忘情。在这里，“闲看远山烟雨蒙蒙，静品香茗古韵悠悠，私话武夷茶事二三”。在这里，掬一捧光阴，握一份懂得，给灵魂以安心和纯净，静候无数雅士莅临。</span></p><p><span style="color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); font-size: 16px; font-family: 楷体, 楷体_GB2312, SimKai;">&nbsp; &nbsp; 享在山居&nbsp;<span style="background-color: rgb(255, 255, 255); font-size: 16px; font-family: 楷体, 楷体_GB2312, SimKai; color: rgb(255, 0, 0);">茶享：享受茶空间美学和武夷茶魅力。聚享：天南海北，三五成群，把酒言欢，畅享亲情和友情。趣享：不走寻常路，享受专属订制的大自然野趣。心享：冥想放空，在这里，遇见更好的自己</span>。住在山居“煮茶崇阳溪，卧看大王峰。”独特的地理位置与完备的酒店设施，带给您温馨的享受。忘我：带您体验新中式大床房，双床房，亲子房。忘情：带您体验新中式与日式的完美结合。忘山：带您体验人与自然的亲密接触。忘月：带您体验新中式套房与自然山水的交融。</span></p><p style="text-align: center;"><span style="color: rgb(51, 51, 51); font-family: Tahoma, Simsun, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);"></span></p>
+            </div>
+        </div>
+
+        
+    </div>
+    <!--end mui-content-->
+</div>
+
+<script src="static/js/jquery-2.1.1.min.js"></script>
+<script>
+    $('.goback').click(function () {
+        window.history.back();
+    });
+    var ctx = "/jszx";
+</script>
+
+<script src="static/js/mui.min.js"></script>
+<script src="static/js/mui.picker.min.js"></script>
+<script src="static/js/layer.js"></script>
+<script src="static/js/extension.js"></script>
+<script src="static/js/vue.min.js"></script>
+<script src="static/js/vue-infinite-scroll.js"></script>
+<script src="static/js/axios.min.js"></script>
+<script src="static/js/moment.min.js"></script>
+<script src="static/js/moment-precise-range.js"></script>
+<script src="static/js/js.cookie.min.js"></script>
+<script src="static/js/swiper.min.js"></script>
+<script src="static/js/lazysizes.min.js"></script>
+<script src="static/js/wap-common.js"></script>
+
+<script src="static/js/wechat-share.js"></script>
+<script src="static/js/jweixin-1.2.0.js"></script>
+
+
+<script>
+    var url = window.location.href;
+    if (url.indexOf("state=STATE") >= 0) {
+        var reg = /code=(.+)&/g;
+        url = url.replace(reg, "");
+        url = url.replace("state=STATE", "");
+        window.location.href = url;
+    }
+    /*微信分享数据*/
+    var ua = window.navigator.userAgent.toLowerCase();
+    if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+        var shareData = {};
+        shareData.title = "武夷山旅游集散中心";
+        shareData.desc = "武夷山旅游  新鲜的旅游资讯、好玩的旅行攻略、及时的出行提示，随时带您玩转武夷～";
+        shareData.img = "https://wys.zmyou.com/cdn/static/wap/img/share.png";
+        share(shareData);
+        $('header').css('display', 'block');
+    } else {
+        $('header').remove();
+        $('.mui-content').css("padding-top", "0px")
+    }
+    mui.back = function () {
+        if ("https://guide.wysly.com/jszx/wap/open/play/hotel/detail/31" == "") {
+            try {
+                //APP
+                phone.backLastView();
+            } catch (e) {
+                window.location.href = "/jszx/wap/open/index";
+            }
+        } else {
+            window.history.back(-1);
+        }
+    };
+</script>
+
+<script>
+
+</script>
+
+
+<script>
+    var vm = new Vue({
+        el: '#main',
+        data: {
+        },
+        mounted: function () {
+            new Swiper('.swiper-container', {
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'fraction',
+                    autoplay: true
+                }
+            });
+        },
+        methods: {
+        }
+    });
+</script>
+</body>
+</html>

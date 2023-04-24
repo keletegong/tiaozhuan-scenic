@@ -1,0 +1,145 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+<link rel="stylesheet" href="static/css/font-awesome.min.css">
+<link rel="stylesheet" href="static/css/mui.min.css">
+<link rel="stylesheet" href="static/css/mui.picker.min.css">
+<link rel="stylesheet" href="static/css/datepicker.css">
+<link rel="stylesheet" href="static/css/swiper.min.css">
+<link rel="stylesheet" href="static/css/wap-base.css">
+<link rel="stylesheet" href="static/css/weixin.css">
+    <title>武夷美食</title>
+</head>
+<body class="white-bg">
+<div id="main">
+    <div class="mui-content white-bg">
+        <a class="mui-action-back mui-icon mui-icon-left-nav s-back"></a>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                
+                    <div class="swiper-slide"><img src="static/picture/1667236260428ups.jpg" height="200px"></div>
+                
+                    <div class="swiper-slide"><img src="static/picture/1667236263176sas.jpg" height="200px"></div>
+                
+            </div>
+            
+                <div class="swiper-pagination"></div>
+            
+        </div>
+
+        <div class="text-box text-box-radius">
+            <p class="pb10 border-bottom" style="font-size: 14pt">千层糕</p>
+            <div>
+                <p style="margin: 20px 0px; text-align: center; line-height: 150%;"><span style="margin: 0px; color: rgb(0, 0, 0); line-height: 150%; font-family: 宋体; font-size: 10.5pt;"><span style="font-family:宋体">千层糕在武夷山被称作为</span>——九层糕，因糕点有九层而得名，也常被叫成层层糕，是武夷山人最常见的一道休闲小吃。</span></p><p style="margin: 20px 0px; line-height: 150%;"><span style="margin: 0px; color: rgb(0, 0, 0); line-height: 150%; font-family: 宋体; font-size: 10.5pt;"><span style="font-family:宋体">　　九层糕主要原料有：籼米、咸菜干、五花肉丁、葱花、香菇。在制作前，先将籼米磨成米浆，咸菜干、香菇切成厚度为几毫米的块状，配上葱花和磨好的米浆搅拌均匀。其次是将口径许尺的圆形平底锅架于大锅内，水量不超过平底锅高度，等水煮沸，将拌好的米浆薄薄的浇入平底锅内，盖上锅盖，</span>3-5分钟后在蒸熟的米浆上涂抹层花生油，再浇入第二层米浆，如此循环9次，这样做出来的糕点就有九层。出锅后的九层糕香味四溢，口感顺滑，可一口吃九层，也可一层层的撕着吃。</span></p><p style="margin: 0px;"><span style="margin: 0px; color: rgb(0, 0, 0); font-family: Calibri; font-size: 10.5pt;"><span style="font-family:宋体">　　将九层糕切成菱形状大小，这样外形即美观又小巧，吃起来也较为方便。每到重阳佳节，武夷山市民虽不会家家户户都能登高远眺，但大多数家庭都会亲自蒸上一锅的九层糕，给邻里、亲朋好友赠上一大碗，相互品尝，预祝彼此家庭和睦团聚，事业节节高升。</span></span></p><p><br></p>
+            </div>
+        </div>
+
+        
+    </div>
+</div>
+
+<script src="static/js/jquery-2.1.1.min.js"></script>
+<script>
+    $('.goback').click(function () {
+        window.history.back();
+    });
+    var ctx = "/jszx";
+</script>
+
+<script src="static/js/mui.min.js"></script>
+<script src="static/js/mui.picker.min.js"></script>
+<script src="static/js/layer.js"></script>
+<script src="static/js/extension.js"></script>
+<script src="static/js/vue.min.js"></script>
+<script src="static/js/vue-infinite-scroll.js"></script>
+<script src="static/js/axios.min.js"></script>
+<script src="static/js/moment.min.js"></script>
+<script src="static/js/moment-precise-range.js"></script>
+<script src="static/js/js.cookie.min.js"></script>
+<script src="static/js/swiper.min.js"></script>
+<script src="static/js/lazysizes.min.js"></script>
+<script src="static/js/wap-common.js"></script>
+
+<script src="static/js/wechat-share.js"></script>
+<script src="static/js/jweixin-1.2.0.js"></script>
+
+
+<script>
+    var url = window.location.href;
+    if (url.indexOf("state=STATE") >= 0) {
+        var reg = /code=(.+)&/g;
+        url = url.replace(reg, "");
+        url = url.replace("state=STATE", "");
+        window.location.href = url;
+    }
+    /*微信分享数据*/
+    var ua = window.navigator.userAgent.toLowerCase();
+    if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+        var shareData = {};
+        shareData.title = "武夷山旅游集散中心";
+        shareData.desc = "武夷山旅游  新鲜的旅游资讯、好玩的旅行攻略、及时的出行提示，随时带您玩转武夷～";
+        shareData.img = "https://wys.zmyou.com/cdn/static/wap/img/share.png";
+        share(shareData);
+        $('header').css('display', 'block');
+    } else {
+        $('header').remove();
+        $('.mui-content').css("padding-top", "0px")
+    }
+    mui.back = function () {
+        if ("https://guide.wysly.com/jszx/wap/open/play/cate/detail/31" == "") {
+            try {
+                //APP
+                phone.backLastView();
+            } catch (e) {
+                window.location.href = "/jszx/wap/open/index";
+            }
+        } else {
+            window.history.back(-1);
+        }
+    };
+</script>
+
+<script>
+
+</script>
+
+
+<script>
+    var vm = new Vue({
+        el: '#main',
+        data: {
+        },
+        mounted: function () {
+            new Swiper('.swiper-container', {
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'fraction',
+                    autoplay: true
+                }
+            });
+        },
+        methods: {
+        }
+    });
+</script>
+</body>
+</html>

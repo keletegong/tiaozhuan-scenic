@@ -1,0 +1,148 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+<link rel="stylesheet" href="static/css/font-awesome.min.css">
+<link rel="stylesheet" href="static/css/mui.min.css">
+<link rel="stylesheet" href="static/css/mui.picker.min.css">
+<link rel="stylesheet" href="static/css/datepicker.css">
+<link rel="stylesheet" href="static/css/swiper.min.css">
+<link rel="stylesheet" href="static/css/wap-base.css">
+<link rel="stylesheet" href="static/css/weixin.css">
+    <title>武夷美购</title>
+</head>
+<body class="white-bg">
+<div id="main">
+    <div class="mui-content white-bg">
+        <a class="mui-action-back mui-icon mui-icon-left-nav s-back"></a>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                
+                    <div class="swiper-slide"><img src="static/picture/1667237022519exz.jpg" height="200px"></div>
+                
+                    <div class="swiper-slide"><img src="static/picture/1667237025214jrc.jpg" height="200px"></div>
+                
+                    <div class="swiper-slide"><img src="static/picture/1667237027327blu.jpg" height="200px"></div>
+                
+            </div>
+            
+                <div class="swiper-pagination"></div>
+            
+        </div>
+
+        <div class="text-box text-box-radius">
+            <p class="pb10 border-bottom" style="font-size: 24pt">大红袍</p>
+            <div>
+                <p style="color: rgb(100, 100, 100); text-indent: 2em; line-height: 1.75em;"><strong><span style="font-size: 14px;">武夷山大红袍</span></strong><span style="font-size: 14px;">是植株灌木型，树冠半披张，权高可达2米以上，主干尚明显，分枝较密，叶梢向上斜生长，叶，一般在6—7cm，长者可达10一11cm；宽一般3cm左右，宽者可达4—4.3cm，中叶型，近阔椭圆形，先端钝略下垂、叶缘略向面、叶绿光亮，叶肉稍厚微隆质脆、叶尚浅尚明27—28对，叶脉7—9对，花型尚大，直径3cm左右，花瓣6片，萼片5片、花丝稀疏稍长，高低不齐，二倍体，茶果中等。嫩芽梢尚壮，深绿微紫，夏梢叶更显带红毫尚显，萌芽、开采期比肉桂品种迟，一般在5月10日左右（缓冬年份）。</span></p><p style="color: rgb(100, 100, 100); line-height: 1.75em;"><img src="static/picture/1667237036428009707.jpg" title="1667237036428009707.jpg" alt="src=http___cbu01.alicdn.com_img_ibank_2019_698_539_12271935896_1944029633.220x220.jpg&amp;refer=http___cbu01.alicdn.webp.jpg"></p><p style="color: rgb(100, 100, 100); text-indent: 2em; line-height: 1.75em;"><span style="font-size: 14px;">武夷山大红袍外形条索紧结，色泽绿褐鲜润，冲泡后汤色橙黄明亮，叶片红绿相间，典型的叶片有绿叶红镶边之美感。大红袍品质最突出之处是香气馥郁有兰花香，香高而持久，“岩韵”明显。大红袍很耐冲泡，冲泡七八次仍有香味。</span></p>
+            </div>
+        </div>
+
+
+        
+    </div>
+    <!--end mui-content-->
+</div>
+
+<script src="static/js/jquery-2.1.1.min.js"></script>
+<script>
+    $('.goback').click(function () {
+        window.history.back();
+    });
+    var ctx = "/jszx";
+</script>
+
+<script src="static/js/mui.min.js"></script>
+<script src="static/js/mui.picker.min.js"></script>
+<script src="static/js/layer.js"></script>
+<script src="static/js/extension.js"></script>
+<script src="static/js/vue.min.js"></script>
+<script src="static/js/vue-infinite-scroll.js"></script>
+<script src="static/js/axios.min.js"></script>
+<script src="static/js/moment.min.js"></script>
+<script src="static/js/moment-precise-range.js"></script>
+<script src="static/js/js.cookie.min.js"></script>
+<script src="static/js/swiper.min.js"></script>
+<script src="static/js/lazysizes.min.js"></script>
+<script src="static/js/wap-common.js"></script>
+
+<script src="static/js/wechat-share.js"></script>
+<script src="static/js/jweixin-1.2.0.js"></script>
+
+
+<script>
+    var url = window.location.href;
+    if (url.indexOf("state=STATE") >= 0) {
+        var reg = /code=(.+)&/g;
+        url = url.replace(reg, "");
+        url = url.replace("state=STATE", "");
+        window.location.href = url;
+    }
+    /*微信分享数据*/
+    var ua = window.navigator.userAgent.toLowerCase();
+    if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+        var shareData = {};
+        shareData.title = "武夷山旅游集散中心";
+        shareData.desc = "武夷山旅游  新鲜的旅游资讯、好玩的旅行攻略、及时的出行提示，随时带您玩转武夷～";
+        shareData.img = "https://wys.zmyou.com/cdn/static/wap/img/share.png";
+        share(shareData);
+        $('header').css('display', 'block');
+    } else {
+        $('header').remove();
+        $('.mui-content').css("padding-top", "0px")
+    }
+    mui.back = function () {
+        if ("https://guide.wysly.com/jszx/wap/open/play/goods/detail/10" == "") {
+            try {
+                //APP
+                phone.backLastView();
+            } catch (e) {
+                window.location.href = "/jszx/wap/open/index";
+            }
+        } else {
+            window.history.back(-1);
+        }
+    };
+</script>
+
+<script>
+
+</script>
+
+
+<script>
+    var vm = new Vue({
+        el: '#main',
+        data: {
+        },
+        mounted: function () {
+            new Swiper('.swiper-container', {
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'fraction',
+                    autoplay: true
+                }
+            });
+        },
+        methods: {}
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+<link rel="stylesheet" href="static/css/font-awesome.min.css">
+<link rel="stylesheet" href="static/css/mui.min.css">
+<link rel="stylesheet" href="static/css/mui.picker.min.css">
+<link rel="stylesheet" href="static/css/datepicker.css">
+<link rel="stylesheet" href="static/css/swiper.min.css">
+<link rel="stylesheet" href="static/css/wap-base.css">
+<link rel="stylesheet" href="static/css/weixin.css">
+    <title>武夷美宿</title>
+</head>
+<body class="white-bg">
+<div id="main">
+    <div class="mui-content white-bg">
+        <a class="mui-action-back mui-icon mui-icon-left-nav s-back"></a>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                
+                    <div class="swiper-slide"><img src="static/picture/1540282938132kmr.png" height="200px"></div>
+                
+                    <div class="swiper-slide"><img src="static/picture/1540282943704rty.png" height="200px"></div>
+                
+                    <div class="swiper-slide"><img src="static/picture/1540282945119ara.jpg" height="200px"></div>
+                
+                    <div class="swiper-slide"><img src="static/picture/1540282947682ygy.jpg" height="200px"></div>
+                
+            </div>
+            
+                <div class="swiper-pagination"></div>
+            
+        </div>
+
+        <div class="text-box text-box-radius">
+            <p class="pb10 border-bottom" style="font-size: 24pt">旧街一号溪岸旅馆</p>
+            <div>
+                <p style="color: rgb(100, 100, 100); text-indent: 2em;"><span style="font-size: 14px;">武夷山旧街一号溪岸旅馆与鼓浪屿圆沙洲连锁旅馆为姐妹店，本旅馆位于三姑朱子渡口旧街一号。酒店地理位置独一无二，景观效果无法复制；正看三姑石、大王峰；旅馆将武夷山风景区的灵魂——九曲溪精华元素充分运用到酒店设计的各个环节，旅馆客房21间，布置出九种风格迥异的客房，面积不等（18—40平方），价格区间在199元——429元不等；为国内外各类文艺青年、摄影爱好者提供人与自然完美结合的心灵住所。顶层山景露台、篝火露台为住店旅客准备了各式咖啡、茶饮、烧烤、酒水；充分体现武夷山慢生活理念。全店覆盖极速无线网络，满足各类网虫需求。</span></p><p style="color: rgb(100, 100, 100); font-family: "><span style="font-size: 14px;"><img src="static/picture/1539867883119021623.png" title="1539867883119021623.png" alt="QQ截图20181018210335.png"></span></p><p style="color: rgb(100, 100, 100); text-indent: 2em;"><span style="font-size: 14px;">旧街1号溪岸旅馆紧邻武夷山漂流中心，靠近宝岛会展中心酒店，位置优越，环境优美。距离武夷山火车站16.5公里；距离武夷山汽车站18.9公里；距离武夷山机场7.4公里。&nbsp;</span><br><span style="font-size: 14px;">地理位置：武夷山三姑度假区旧街一号&nbsp;</span><br><span style="font-size: 14px;">交通方式：火车站、机场均可乘坐6路公交车、的士抵达&nbsp;</span><br><span style="font-size: 14px;">咨询电话：0599-5207288</span></p>
+            </div>
+        </div>
+
+        
+    </div>
+    <!--end mui-content-->
+</div>
+
+<script src="static/js/jquery-2.1.1.min.js"></script>
+<script>
+    $('.goback').click(function () {
+        window.history.back();
+    });
+    var ctx = "/jszx";
+</script>
+
+<script src="static/js/mui.min.js"></script>
+<script src="static/js/mui.picker.min.js"></script>
+<script src="static/js/layer.js"></script>
+<script src="static/js/extension.js"></script>
+<script src="static/js/vue.min.js"></script>
+<script src="static/js/vue-infinite-scroll.js"></script>
+<script src="static/js/axios.min.js"></script>
+<script src="static/js/moment.min.js"></script>
+<script src="static/js/moment-precise-range.js"></script>
+<script src="static/js/js.cookie.min.js"></script>
+<script src="static/js/swiper.min.js"></script>
+<script src="static/js/lazysizes.min.js"></script>
+<script src="static/js/wap-common.js"></script>
+
+<script src="static/js/wechat-share.js"></script>
+<script src="static/js/jweixin-1.2.0.js"></script>
+
+
+<script>
+    var url = window.location.href;
+    if (url.indexOf("state=STATE") >= 0) {
+        var reg = /code=(.+)&/g;
+        url = url.replace(reg, "");
+        url = url.replace("state=STATE", "");
+        window.location.href = url;
+    }
+    /*微信分享数据*/
+    var ua = window.navigator.userAgent.toLowerCase();
+    if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+        var shareData = {};
+        shareData.title = "武夷山旅游集散中心";
+        shareData.desc = "武夷山旅游  新鲜的旅游资讯、好玩的旅行攻略、及时的出行提示，随时带您玩转武夷～";
+        shareData.img = "https://wys.zmyou.com/cdn/static/wap/img/share.png";
+        share(shareData);
+        $('header').css('display', 'block');
+    } else {
+        $('header').remove();
+        $('.mui-content').css("padding-top", "0px")
+    }
+    mui.back = function () {
+        if ("https://guide.wysly.com/jszx/wap/open/play/hotel/detail/13" == "") {
+            try {
+                //APP
+                phone.backLastView();
+            } catch (e) {
+                window.location.href = "/jszx/wap/open/index";
+            }
+        } else {
+            window.history.back(-1);
+        }
+    };
+</script>
+
+<script>
+
+</script>
+
+
+<script>
+    var vm = new Vue({
+        el: '#main',
+        data: {
+        },
+        mounted: function () {
+            new Swiper('.swiper-container', {
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'fraction',
+                    autoplay: true
+                }
+            });
+        },
+        methods: {
+        }
+    });
+</script>
+</body>
+</html>
