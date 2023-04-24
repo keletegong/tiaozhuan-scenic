@@ -1,0 +1,110 @@
+
+.calendar-box {
+    margin: 0 auto;
+}
+
+.calendar_num li {
+    float: left;
+    width: 14.28%;
+    padding: 5px 0;
+    text-align: center !important;
+}
+
+.calendar_num .bold {
+    color: #31a072;
+    font-weight: bold;
+}
+
+.control {
+    position: relative;
+    text-align: center;
+    height: 28px;
+    line-height: 28px;
+}
+
+.prev, .next {
+    position: absolute;
+    width: 30px;
+    height: 28px;
+}
+
+.control i {
+    color: #31a072;
+    font-weight: bold;
+    position: absolute;
+}
+
+.control span {
+    color: #31a072;
+}
+
+.prev {
+    left: 5px;
+    top: 5px;
+}
+
+.next {
+    right: 15px;
+    top: 5px;
+}
+.next i.icon-back {
+    position: absolute;
+    transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+}
+
+.control a.disabled i {
+    color: #AAA;
+}
+
+.calendar-table {
+    width: 100%;
+    color: #AAA;
+}
+
+.calendar-table td {
+    width: 45px;
+    text-align: center;
+    vertical-align: top;
+    padding: 0;
+    height: 45px;
+}
+
+.calendar-table td a {
+    color: #aaa;
+    display: inline-block;
+}
+
+.calendar-table td span {
+    display: block;
+}
+
+.calendar-table td.on a {
+    color: #5F5F5F;
+}
+
+.calendar-table td.on a.active {
+    background: #31a072;
+    color: #FFF;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+}
+
+.calendar-table .price, .calendar-table .qt_price {
+    color: #31a072;
+    font-size: 12px;
+}
+
+.calendar-table td.on a.active .price, .calendar-table td.on a.active .qt_price {
+    color: #FFF;
+}
+
+.lock {
+    background: url(../image/lock.png) no-repeat center;
+    display: inline-block !important;
+    width: 12px;
+    height: 16px;
+    background-size: cover;
+}

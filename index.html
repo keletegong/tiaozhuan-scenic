@@ -1,28 +1,384 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ƕ��ҳ��</title>
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
-    }
 
-    iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-  </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+<link rel="stylesheet" href="static/css/font-awesome.min.css">
+<link rel="stylesheet" href="static/css/mui.min.css">
+<link rel="stylesheet" href="static/css/mui.picker.min.css">
+<link rel="stylesheet" href="static/css/datepicker.css">
+<link rel="stylesheet" href="static/css/swiper.min.css">
+<link rel="stylesheet" href="static/css/wap-base.css">
+<link rel="stylesheet" href="static/css/weixin.css">
+    <title>玩转武夷</title>
 </head>
-<body>
-  <iframe src="https://guide.wysly.com/jszx/wap/open/play/scenic" allowfullscreen></iframe>
+<body class="white-bg">
+<div id="main">
+    <header class="mui-bar mui-bar-nav" style="display: none">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <a class="mui-icon mui-icon-bars mui-pull-right" href="#popover"></a>
+        <h1 class="mui-title">武夷美景</h1>
+    </header>
+    <div class="mui-content white-bg">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                
+                    <div class="swiper-slide"><a href=""><img src="static/picture/1540192038632gdz.png"></a></div>
+                
+            </div>
+            
+                <div class="swiper-pagination"></div>
+            
+        </div>
+
+        
+            <ul class="scenery-list">
+                
+                    <li>
+                        <a href="12.html">
+                            <p>武夷山风景名胜区<span class="btn-dk ml5 f12">5A景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667232254607nen.jpg" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="27.html">
+                            <p>九曲溪<span class="btn-dk ml5 f12">5A景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667232674061det.jpg" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="9.html">
+                            <p>印象大红袍<span class="btn-dk ml5 f12">4A景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667233157954iin.jpg" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="18.html">
+                            <p>下梅古民居<span class="btn-dk ml5 f12">3A景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667233724454gqo.jpg" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="19.html">
+                            <p>青龙大瀑布<span class="btn-dk ml5 f12">4A景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667233890825ccj.jpg" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="11.html">
+                            <p>云河漂流<span class="btn-dk ml5 f12">4A景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667234691098klz.jpg" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="20.html">
+                            <p>龙川大峡谷<span class="btn-dk ml5 f12">普通景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667235051271bvw.jpg" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="23.html">
+                            <p>武夷山茶博园<span class="btn-dk ml5 f12">3A景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667234878243spo.jpg" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="76.html">
+                            <p>武夷山极地海洋公园<span class="btn-dk ml5 f12">普通景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667235229079qeu.jpg" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="72.html">
+                            <p>三木自游小镇<span class="btn-dk ml5 f12">4A景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667235557858akf.jpg" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="74.html">
+                            <p>五夫朱子故里<span class="btn-dk ml5 f12">4A景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667235691484lbo.jpg" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="73.html">
+                            <p>十八寨景区<span class="btn-dk ml5 f12">3A景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667235542470yue.png" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="25.html">
+                            <p>赤石暴动纪念馆<span class="btn-dk ml5 f12">普通景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667235445204vtq.png" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="24.html">
+                            <p>城村古汉城遗址<span class="btn-dk ml5 f12">普通景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667235332694xzz.png" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="78.html">
+                            <p>武夷蛇博园<span class="btn-dk ml5 f12">普通景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667235135987rqz.png" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="79.html">
+                            <p>武夷香江茗苑<span class="btn-dk ml5 f12">4A景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667235001506dmm.png" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="80.html">
+                            <p>武夷源生态旅游区<span class="btn-dk ml5 f12">普通景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667234795691gdi.png" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="81.html">
+                            <p>遇林亭窑址<span class="btn-dk ml5 f12">普通景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667234209484kbd.png" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="82.html">
+                            <p>武夷山遇林庄园<span class="btn-dk ml5 f12">3A景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667232571971mjr.jpg" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="84.html">
+                            <p>齐云峰景区<span class="btn-dk ml5 f12">3A景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667232930708leh.png" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="83.html">
+                            <p>武夷紫薇自驾主题乐园<span class="btn-dk ml5 f12">3A景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667233192228kvg.jpg" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="85.html">
+                            <p>福建省观光工厂 中华茗园（武夷星茶业）<span class="btn-dk ml5 f12">普通景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667234052644osq.png" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="88.html">
+                            <p>休闲集镇——洋庄乡<span class="btn-dk ml5 f12">普通景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667233916347brf.png" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="102.html">
+                            <p>中国传统村落——五夫镇<span class="btn-dk ml5 f12">普通景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667233397889qwy.jpg" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="100.html">
+                            <p>中国历史文化名村——下梅<span class="btn-dk ml5 f12">普通景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667233543485hqq.jpg" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="86.html">
+                            <p>休闲集镇——星村镇<span class="btn-dk ml5 f12">普通景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667233080305igl.jpg" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="98.html">
+                            <p>中国传统村落-岚谷乡<span class="btn-dk ml5 f12">普通景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667232976757fxg.jpg" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="105.html">
+                            <p>中国传统村落-吴屯乡<span class="btn-dk ml5 f12">普通景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667232790714lel.jpg" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="107.html">
+                            <p>中国传统村落-上梅乡<span class="btn-dk ml5 f12">普通景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667232626432mde.jpg" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="8.html">
+                            <p>中华武夷茶博园<span class="btn-dk ml5 f12">4A景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667232431767tim.jpg" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="71.html">
+                            <p>闽北革命历史纪念馆<span class="btn-dk ml5 f12">普通景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667232295574vma.jpg" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="26.html">
+                            <p>大安闽北分区政府礼堂<span class="btn-dk ml5 f12">普通景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667232215874qkp.jpg" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="21.html">
+                            <p>武夷源<span class="btn-dk ml5 f12">3A景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221101/1667232010399fxe.jpg" width="375" height="194">
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="22.html">
+                            <p>玉龙谷<span class="btn-dk ml5 f12">3A景区</span></p>
+                            <img class="lazyload" data-src="https://wys.zmyou.com/upload/image/20221031/1667231631040uym.jpg" width="375" height="194">
+                        </a>
+                    </li>
+                
+            </ul>
+        
+    </div>
+
+    <div id="popover" class="mui-popover menu-box">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell"><a href="index1.html"><i class="icon icon-home-s"></i>首页</a></li>
+            <li class="mui-table-view-cell"><a href="index2.html"><i class="icon icon-use-s"></i>个人中心</a></li>
+            <li class="mui-table-view-cell"><a href="login1.html"><i class="icon icon-tousu"></i>旅游投诉</a></li>
+        </ul>
+    </div>
+</div>
+
+<script src="static/js/jquery-2.1.1.min.js"></script>
+<script>
+    $('.goback').click(function () {
+        window.history.back();
+    });
+    var ctx = "/jszx";
+</script>
+
+<script src="static/js/mui.min.js"></script>
+<script src="static/js/mui.picker.min.js"></script>
+<script src="static/js/layer.js"></script>
+<script src="static/js/extension.js"></script>
+<script src="static/js/vue.min.js"></script>
+<script src="static/js/vue-infinite-scroll.js"></script>
+<script src="static/js/axios.min.js"></script>
+<script src="static/js/moment.min.js"></script>
+<script src="static/js/moment-precise-range.js"></script>
+<script src="static/js/js.cookie.min.js"></script>
+<script src="static/js/swiper.min.js"></script>
+<script src="static/js/lazysizes.min.js"></script>
+<script src="static/js/wap-common.js"></script>
+
+<script src="static/js/wechat-share.js"></script>
+<script src="static/js/jweixin-1.2.0.js"></script>
+
+
+<script>
+    var url = window.location.href;
+    if (url.indexOf("state=STATE") >= 0) {
+        var reg = /code=(.+)&/g;
+        url = url.replace(reg, "");
+        url = url.replace("state=STATE", "");
+        window.location.href = url;
+    }
+    /*微信分享数据*/
+    var ua = window.navigator.userAgent.toLowerCase();
+    if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+        var shareData = {};
+        shareData.title = "武夷山旅游集散中心";
+        shareData.desc = "武夷山旅游  新鲜的旅游资讯、好玩的旅行攻略、及时的出行提示，随时带您玩转武夷～";
+        shareData.img = "https://wys.zmyou.com/cdn/static/wap/img/share.png";
+        share(shareData);
+        $('header').css('display', 'block');
+    } else {
+        $('header').remove();
+        $('.mui-content').css("padding-top", "0px")
+    }
+    mui.back = function () {
+        if ("https://guide.wysly.com/jszx/wap/open/play/scenic" == "") {
+            try {
+                //APP
+                phone.backLastView();
+            } catch (e) {
+                window.location.href = "/jszx/wap/open/index";
+            }
+        } else {
+            window.history.back(-1);
+        }
+    };
+</script>
+
+<script>
+
+</script>
+
+
+<script>
+    lazySizes.init();
+
+    var swiper = new Swiper('.swiper-container', {
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+            autoplay: true
+        },
+    });
+</script>
+	<div style="display:none;"><a href="https://smalltool.github.io/">网页批量下载器</a></div>
 </body>
 </html>

@@ -1,0 +1,215 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+<link rel="stylesheet" href="static/css/font-awesome.min.css">
+<link rel="stylesheet" href="static/css/mui.min.css">
+<link rel="stylesheet" href="static/css/mui.picker.min.css">
+<link rel="stylesheet" href="static/css/datepicker.css">
+<link rel="stylesheet" href="static/css/swiper.min.css">
+<link rel="stylesheet" href="static/css/wap-base.css">
+<link rel="stylesheet" href="static/css/weixin.css">
+    <title>个人中心</title>
+</head>
+<body>
+<div id="main">
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">个人中心</h1>
+    </header>
+    <nav class="mui-bar mui-bar-tab foot-menu">
+        <a class="mui-tab-item" href="index1.html">
+            <span class="mui-icon icon icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a class="mui-tab-item" href="service.html">
+            <span class="mui-icon icon-server"></span>
+            <span class="mui-tab-label">预订</span>
+        </a>
+        <a class="mui-tab-item mui-active" href="#tabbar-with-map">
+            <span class="mui-icon icon-me"></span>
+            <span class="mui-tab-label">我的</span>
+        </a>
+    </nav>
+    <div class="mui-content white-bg">
+        <div class="banner">
+            <img src="static/picture/vip-banner.jpg">
+            <a href="login8.html"><span class="mui-icon mui-icon-gear"></span></a>
+        </div>
+        <div class="vip-box">
+            
+                
+                
+                    <img class="vip-logo" src="static/picture/default-avatar.png">
+                
+            
+            <p class="mui-text-center f16">
+                
+                
+                    <a href="login9.html">登录/注册</a>
+                
+            </p>
+            
+            <ul class="mui-table-view mui-grid-view no-border mt10 border-bottom">
+                <li class="mui-table-view-cell mui-col-xs-3 mui-col-sm-3">
+                    <a href="javascript:;">
+                        <span class="icon icon-guide"></span>
+                        <div class="mui-media-body">导游</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-col-xs-3 mui-col-sm-3">
+                    <a href="javascript:;">
+                        <span class="icon icon-minsu"></span>
+                        <div class="mui-media-body">民宿</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-col-xs-3 mui-col-sm-3">
+                    <a href="javascript:;">
+                        <span class="icon icon-mp"></span>
+                        <div class="mui-media-body">门票</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-col-xs-3 mui-col-sm-3">
+                    <a href="javascript:;">
+                        <span class="icon icon-line"></span>
+                        <div class="mui-media-body">线路</div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="vip-link">
+                <a href="login2.html">
+                    <li>
+                        <i class="icon icon-dt"></i>低碳武夷<span class="pull-right fa fa-angle-right"></span>
+                    </li>
+                </a>
+                <a href="login1.html">
+                    <li>
+                        <i class="icon icon-tousu-s"></i>旅游投诉<span class="pull-right fa fa-angle-right"></span>
+                    </li>
+                </a>
+                <a href="common.html">
+                    <li>
+                        <i class="icon icon-info"></i>常用信息<span class="pull-right fa fa-angle-right"></span>
+                    </li>
+                </a>
+                
+                <a href="help.html">
+                    <li>
+                        <i class="icon icon-helps"></i>帮助与反馈<span class="pull-right fa fa-angle-right"></span>
+                    </li>
+                </a>
+                <a href="app.html">
+                    <li>
+                        <i class="icon icon-download-s"></i>APP下载<span class="pull-right fa fa-angle-right"></span>
+                    </li>
+                </a>
+                <a href="tel:0599-5139099">
+                    <li>
+                        <i class="icon icon-tel-s"></i>客服电话<span class="pull-right fa">0599-5139099</span>
+                    </li>
+                </a>
+            </ul>
+        </div>
+        <!--end vip-box-->
+    </div>
+    <!--end mui-content-->
+</div>
+
+
+<script src="static/js/jquery-2.1.1.min.js"></script>
+<script>
+    $('.goback').click(function () {
+        window.history.back();
+    });
+    var ctx = "/jszx";
+</script>
+
+<script src="static/js/mui.min.js"></script>
+<script src="static/js/mui.picker.min.js"></script>
+<script src="static/js/layer.js"></script>
+<script src="static/js/extension.js"></script>
+<script src="static/js/vue.min.js"></script>
+<script src="static/js/vue-infinite-scroll.js"></script>
+<script src="static/js/axios.min.js"></script>
+<script src="static/js/moment.min.js"></script>
+<script src="static/js/moment-precise-range.js"></script>
+<script src="static/js/js.cookie.min.js"></script>
+<script src="static/js/swiper.min.js"></script>
+<script src="static/js/lazysizes.min.js"></script>
+<script src="static/js/wap-common.js"></script>
+
+<script src="static/js/wechat-share.js"></script>
+<script src="static/js/jweixin-1.2.0.js"></script>
+
+
+<script>
+    var url = window.location.href;
+    if (url.indexOf("state=STATE") >= 0) {
+        var reg = /code=(.+)&/g;
+        url = url.replace(reg, "");
+        url = url.replace("state=STATE", "");
+        window.location.href = url;
+    }
+    /*微信分享数据*/
+    var ua = window.navigator.userAgent.toLowerCase();
+    if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+        var shareData = {};
+        shareData.title = "武夷山旅游集散中心";
+        shareData.desc = "武夷山旅游  新鲜的旅游资讯、好玩的旅行攻略、及时的出行提示，随时带您玩转武夷～";
+        shareData.img = "https://wys.zmyou.com/cdn/static/wap/img/share.png";
+        share(shareData);
+        $('header').css('display', 'block');
+    } else {
+        $('header').remove();
+        $('.mui-content').css("padding-top", "0px")
+    }
+    mui.back = function () {
+        if ("https://guide.wysly.com/jszx/wap/open/myself/index" == "") {
+            try {
+                //APP
+                phone.backLastView();
+            } catch (e) {
+                window.location.href = "/jszx/wap/open/index";
+            }
+        } else {
+            window.history.back(-1);
+        }
+    };
+</script>
+
+<script>
+
+</script>
+
+
+<script>
+    mui('body').on('tap', 'a', function () {
+        document.location.href = this.href;
+    });
+
+    $(function () {
+        if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+            $(".mui-bar-nav").remove();
+        }
+    })
+</script>
+</body>
+</html>
