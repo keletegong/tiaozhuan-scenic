@@ -1,0 +1,227 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+<link rel="stylesheet" href="../../../cdn/static/wap/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../../cdn/static/wap/css/mui.min.css">
+<link rel="stylesheet" href="../../../cdn/static/wap/css/mui.picker.min.css">
+<link rel="stylesheet" href="../../../cdn/static/wap/css/datepicker.css">
+<link rel="stylesheet" href="../../../cdn/static/wap/css/swiper.min.css">
+<link rel="stylesheet" href="../../../cdn/static/assets/css/wap-base.css">
+<link rel="stylesheet" href="../../../cdn/static/wap/weixin-css/weixin.css">
+    <title>武夷山旅游</title>
+</head>
+<body class="white-bg">
+<form method="post" action="/jszx/wap/open/auth">
+    <div id="main">
+        <div class="mui-content white-bg form-box login-box">
+            <p class="mui-text-center">
+                <img src="../../../cdn/static/wap/img/wlogo.png" style="width: 80px;">
+            </p>
+            <p class="mui-text-center green f16">武夷山旅游</p>
+            <div class="mui-input-row item">
+                <label><i class="fa fa-mobile"></i></label>
+                <input type="hidden" id="loginType" name="loginType" value="VERIFY_CODE">
+                <input type="text" id="loginName" name="loginName" class="mui-input-clear" placeholder="登录账号为手机号码" autocomplete="off">
+            </div>
+            <div class="mui-input-row item">
+                <label><i class="fa fa-key"></i></label>
+                <input type="text" id="verifyCode" name="verifyCode" class="mui-input-clear" placeholder="请输入短信验证码" autocomplete="off" style="width: 50%;">
+                <span class="green" id="sendVerifyCode">获取验证码</span>
+            </div>
+            <div class="text-center">
+                <button id="login" type="submit" class="btn btn-primary width-100">确定</button>
+            </div>
+        </div>
+        <!--end child-box-->
+    </div>
+    <div id="captcha-div" style="display: none;" class="code-box">
+        <div class="code-box-wrap">
+            <input type="text" name="captcha" id="captcha" style="color: #999;" value="" placeholder="图形验证码">
+            <span>
+	         <a href="javascript:refreshCaptcha();">
+                 <img id="captcha-img" src="https://guide.wysly.com/jszx/security/captcha" style=" vertical-align: middle; margin-left: 3px; height:34px;">
+             </a>
+        </span>
+        </div>
+        <button type="button" onclick="doSend()" class="btn btn-primary width-100">提交</button>
+    </div>
+    <input type="hidden" name="redirectUrl" value="">
+</form>
+
+
+<script src="../../../cdn/static/wap/js/jquery-2.1.1.min.js"></script>
+<script>
+    $('.goback').click(function () {
+        window.history.back();
+    });
+    var ctx = "/jszx";
+</script>
+
+<script src="../../../cdn/static/wap/js/mui.min.js"></script>
+<script src="../../../cdn/static/wap/js/mui.picker.min.js"></script>
+<script src="../../../cdn/static/wap/js/layer/layer.js"></script>
+<script src="../../../cdn/static/wap/js/extension.js"></script>
+<script src="../../../cdn/static/wap/js/vue.min.js"></script>
+<script src="../../../cdn/static/wap/js/vue-infinite-scroll.js"></script>
+<script src="../../../cdn/static/wap/js/axios.min.js"></script>
+<script src="../../../cdn/static/wap/js/moment.min.js"></script>
+<script src="../../../cdn/static/wap/js/moment-precise-range.js"></script>
+<script src="../../../cdn/static/wap/js/js.cookie.min.js"></script>
+<script src="../../../cdn/static/wap/js/swiper.min.js"></script>
+<script src="../../../cdn/static/wap/js/lazysizes.min.js"></script>
+<script src="../../../cdn/static/wap/js/wap-common.js"></script>
+
+<script src="../../../cdn/static/wap/js/wechat-share.js"></script>
+<script src="../../../open/js/jweixin-1.2.0.js"></script>
+
+
+<script>
+    var url = window.location.href;
+    if (url.indexOf("state=STATE") >= 0) {
+        var reg = /code=(.+)&/g;
+        url = url.replace(reg, "");
+        url = url.replace("state=STATE", "");
+        window.location.href = url;
+    }
+    /*微信分享数据*/
+    var ua = window.navigator.userAgent.toLowerCase();
+    if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+        var shareData = {};
+        shareData.title = "武夷山旅游集散中心";
+        shareData.desc = "武夷山旅游  新鲜的旅游资讯、好玩的旅行攻略、及时的出行提示，随时带您玩转武夷～";
+        shareData.img = "https://wys.zmyou.com/cdn/static/wap/img/share.png";
+        share(shareData);
+        $('header').css('display', 'block');
+    } else {
+        $('header').remove();
+        $('.mui-content').css("padding-top", "0px")
+    }
+    mui.back = function () {
+        if ("https://guide.wysly.com/jszx/wap/open/login" == "") {
+            try {
+                //APP
+                phone.backLastView();
+            } catch (e) {
+                window.location.href = "/jszx/wap/open/index";
+            }
+        } else {
+            window.history.back(-1);
+        }
+    };
+</script>
+
+<script>
+
+</script>
+
+
+<script src="../../../cdn/static/assets/js/src/jquery.timers.js"></script>
+<script type="text/javascript">
+    if ("" != "") {
+        layer.msg("");
+    }
+
+    function refreshCaptcha() {
+        $('#captcha-img').attr('src', '/jszx/security/captcha?_=' + Math.random());
+    }
+
+    $("#sendVerifyCode").click(function () {
+        if ($('#sendVerifyCode').html() != '获取验证码') {
+            return false;
+        }
+        if ($.trim($('#loginName').val()).length == 0) {
+            layer.msg("请输入手机号码");
+            return false;
+        }
+        if (!checkMobileFormat($("#loginName").val())) {
+            layer.msg('手机号码输入格式有误');
+            return false;
+        }
+        layer.open({
+            type: 1,
+            content: $('#captcha-div'),
+            title: '输入图形验证码'
+        });
+        $("#captcha").focus();
+    });
+
+    function doSend() {
+        if ($.trim($('#captcha').val()).length == 0) {
+            layer.msg("请输入图形验证码");
+            return false;
+        }
+        $.ajax({
+            type: "post",
+            url: "/jszx/wap/open/send-code",
+            data: {loginName: $('#loginName').val(), "captcha": $.trim($('#captcha').val())},
+            cache: false
+        }).done(function (json) {
+            if (json.status == "1") {
+                parent.layer.closeAll();
+                layer.msg("短信验证码已发送");
+                var second = 60;
+                $('body').everyTime('1s', function () {
+                    $('#sendVerifyCode').html("倒计时" + (--second) + "秒");
+                    $('#sendVerifyCode').attr("disabled", "disabled");//当还在倒计时不允许再重新发送
+                    if (second < 0) {
+                        $('#sendVerifyCode').removeAttr("disabled");
+                        $('#sendVerifyCode').html('获取验证码');
+                    }
+                }, 61);
+            } else {
+                $('#sendVerifyCode').removeAttr("disabled");
+                $('#sendVerifyCode').html('获取验证码');
+                refreshCaptcha();
+                $('#captcha').val('');
+                layer.msg(json.detail);
+            }
+        });
+        return false;
+    }
+
+    $("#login").click(function () {
+        if ($.trim($('#loginName').val()).length == 0) {
+            layer.msg("请输入手机号码");
+            return false;
+        }
+        if (!checkMobileFormat($("#loginName").val())) {
+            layer.msg('手机号码输入格式有误');
+            return false;
+        }
+        if ($.trim($('#verifyCode').val()).length == 0) {
+            layer.msg("请输入短信验证码");
+            return false;
+        }
+        /*if ($.trim($('#captcha').val()).length == 0) {
+            layer.open({
+                type: 1,
+                content: $('#captcha-div'),
+                title: '输入图形验证码'
+            });
+            $("#captcha").focus();
+            layer.msg("请输入图形验证码");
+            return false;
+         }*/
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+<link rel="stylesheet" href="../../../../../cdn/static/wap/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../../../../cdn/static/wap/css/mui.min.css">
+<link rel="stylesheet" href="../../../../../cdn/static/wap/css/mui.picker.min.css">
+<link rel="stylesheet" href="../../../../../cdn/static/wap/css/datepicker.css">
+<link rel="stylesheet" href="../../../../../cdn/static/wap/css/swiper.min.css">
+<link rel="stylesheet" href="../../../../../cdn/static/assets/css/wap-base.css">
+<link rel="stylesheet" href="../../../../../cdn/static/wap/weixin-css/weixin.css">
+    <title>便民服务</title>
+</head>
+<body>
+<div id="main">
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <a class="mui-icon mui-icon-bars mui-pull-right" href="#popover"></a>
+        <h1 class="mui-title">便民服务</h1>
+    </header>
+    <div class="mui-content service-box">
+        <div class="white-bg p10">
+            <p class="f16 bold">实景武夷</p>
+            <ul class="mui-table-view mui-grid-view no-border mt10">
+                <li class="mui-table-view-cell mui-col-xs-3 mui-col-sm-3">
+                    <a href="javascript:window.open('http://720quanjingnew.zmyou.org/zhuanti/wuyishan/');" target="_blank">
+                        <span class="icon icon-vr"></span>
+                        <div class="mui-media-body">VR游武夷</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="white-bg p10 mt10">
+            <p class="f16 bold">交通查询</p>
+            <ul class="mui-table-view mui-grid-view no-border mt10">
+                <li class="mui-table-view-cell mui-col-xs-3 mui-col-sm-3">
+                    <a href="javascript:window.open('http://wxbus.0595erp.com/LineList/index?cCity=350782');">
+                        <span class="icon icon-bus"></span>
+                        <div class="mui-media-body">实时公交</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-col-xs-3 mui-col-sm-3">
+                    <a href="flight-info.html">
+                        <span class="icon icon-plane"></span>
+                        <div class="mui-media-body">航班动态</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="white-bg p10 mt10">
+            <p class="f16 bold">便民查找</p>
+            <ul class="mui-table-view mui-grid-view no-border mt10">
+                <li class="mui-table-view-cell mui-col-xs-3 mui-col-sm-3">
+                    <a href="javascript:find('厕所');">
+                        <span class="icon icon-ce"></span>
+                        <div class="mui-media-body">找厕所</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-col-xs-3 mui-col-sm-3">
+                    <a href="javascript:find('便利店');">
+                        <span class="icon icon-stores"></span>
+                        <div class="mui-media-body">找便利店</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-col-xs-3 mui-col-sm-3">
+                    <a href="javascript:find('药店');">
+                        <span class="icon icon-pharmacy"></span>
+                        <div class="mui-media-body">找药店</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-col-xs-3 mui-col-sm-3">
+                    <a href="javascript:find('停车');">
+                        <span class="icon icon-car"></span>
+                        <div class="mui-media-body">找车位</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--end mui-content-->
+    <div id="popover" class="mui-popover menu-box">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell"><a href="../../index.html"><i class="icon icon-home-s"></i>首页</a></li>
+            <li class="mui-table-view-cell"><a href="../../myself/index.html"><i class="icon icon-use-s"></i>个人中心</a></li>
+            <li class="mui-table-view-cell"><a href="../../login9.html"><i class="icon icon-tousu"></i>旅游投诉</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<script src="../../../../../cdn/static/wap/js/jquery-2.1.1.min.js"></script>
+<script>
+    $('.goback').click(function () {
+        window.history.back();
+    });
+    var ctx = "/jszx";
+</script>
+
+<script src="../../../../../cdn/static/wap/js/mui.min.js"></script>
+<script src="../../../../../cdn/static/wap/js/mui.picker.min.js"></script>
+<script src="../../../../../cdn/static/wap/js/layer/layer.js"></script>
+<script src="../../../../../cdn/static/wap/js/extension.js"></script>
+<script src="../../../../../cdn/static/wap/js/vue.min.js"></script>
+<script src="../../../../../cdn/static/wap/js/vue-infinite-scroll.js"></script>
+<script src="../../../../../cdn/static/wap/js/axios.min.js"></script>
+<script src="../../../../../cdn/static/wap/js/moment.min.js"></script>
+<script src="../../../../../cdn/static/wap/js/moment-precise-range.js"></script>
+<script src="../../../../../cdn/static/wap/js/js.cookie.min.js"></script>
+<script src="../../../../../cdn/static/wap/js/swiper.min.js"></script>
+<script src="../../../../../cdn/static/wap/js/lazysizes.min.js"></script>
+<script src="../../../../../cdn/static/wap/js/wap-common.js"></script>
+
+<script src="../../../../../cdn/static/wap/js/wechat-share.js"></script>
+<script src="../../../../../open/js/jweixin-1.2.0.js"></script>
+
+
+<script>
+    var url = window.location.href;
+    if (url.indexOf("state=STATE") >= 0) {
+        var reg = /code=(.+)&/g;
+        url = url.replace(reg, "");
+        url = url.replace("state=STATE", "");
+        window.location.href = url;
+    }
+    /*微信分享数据*/
+    var ua = window.navigator.userAgent.toLowerCase();
+    if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+        var shareData = {};
+        shareData.title = "武夷山旅游集散中心";
+        shareData.desc = "武夷山旅游  新鲜的旅游资讯、好玩的旅行攻略、及时的出行提示，随时带您玩转武夷～";
+        shareData.img = "https://wys.zmyou.com/cdn/static/wap/img/share.png";
+        share(shareData);
+        $('header').css('display', 'block');
+    } else {
+        $('header').remove();
+        $('.mui-content').css("padding-top", "0px")
+    }
+    mui.back = function () {
+        if ("https://guide.wysly.com/jszx/wap/open/house-keeper/service/convenience" == "") {
+            try {
+                //APP
+                phone.backLastView();
+            } catch (e) {
+                window.location.href = "/jszx/wap/open/index";
+            }
+        } else {
+            window.history.back(-1);
+        }
+    };
+</script>
+
+<script>
+
+</script>
+
+
+<script>
+    var latitude = null; // 纬度，浮点数，范围为90 ~ -90
+    var longitude = null; // 经度，浮点数，范围为180 ~ -180。
+    function getLocation() {
+        wx.getLocation({
+            type: 'gcj02', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
+            success: function (res) {
+                latitude = res.latitude; // 纬度，浮点数，范围为90 ~ -90
+                longitude = res.longitude; // 经度，浮点数，范围为180 ~ -180。
+            },
+            cancel: function (res) {
+
+            }
+        });
+    }
+
+    function find(type) {
+        var url = "";
+        if (latitude != null && longitude != null) {
+            url = "&geoobj=" + longitude + "|" + latitude;
+        }
+        window.location.href = "https://m.amap.com/search/view/keywords=" + type + "&city=350782&zoom=18" + url;
+    }
+
+</script>
+</body>
+</html>
