@@ -1,0 +1,146 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/css/mui.min.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/css/mui.picker.min.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/css/datepicker.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/css/swiper.min.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/assets/css/wap-base.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/weixin-css/weixin.css">
+    <title>武夷美宿</title>
+</head>
+<body class="white-bg">
+<div id="main">
+    <div class="mui-content white-bg">
+        <a class="mui-action-back mui-icon mui-icon-left-nav s-back"></a>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                
+                    <div class="swiper-slide"><img src="../../../../../../upload/image/20221101/1667235564272blp.jpg" height="200px"></div>
+                
+                    <div class="swiper-slide"><img src="../../../../../../upload/image/20221101/1667235567508lwe.jpg" height="200px"></div>
+                
+            </div>
+            
+                <div class="swiper-pagination"></div>
+            
+        </div>
+
+        <div class="text-box text-box-radius">
+            <p class="pb10 border-bottom" style="font-size: 24pt">武夷山千里走单骑客栈</p>
+            <div>
+                <p style="text-indent: 32px; background: white; line-height: 1.75em;"><span style="font-family: 楷体, 楷体_GB2312, SimKai;">留下记忆的家，<strong>武夷山千里走单骑客栈</strong>位于武夷山度假区崇阳溪畔幔亭峰北路，<span style="font-family: 楷体, 楷体_GB2312, SimKai; color: rgb(0, 176, 80);">九曲溪在门前蜿蜒而过，大王峰与之隔溪相望，推窗即景，每一口呼吸都带着清甜</span>。12个景观房、3间茶室、1个会议室……每一处，都透露着家的温馨和景的隽秀。或漫步闲庭，或奔走溪畔，或发呆沉思，或望山品茗，在这里，总能找到一种适合自己的休憩方式。</span></p><p style="text-indent: 32px; background: white; line-height: 1.75em;"><span style="font-family: 楷体, 楷体_GB2312, SimKai;">留宿武夷山的理由很多，相信千里走单骑就是其中一个。<span style="font-family: 楷体, 楷体_GB2312, SimKai; color: rgb(0, 176, 240);">因为一座山，一盏茶</span>！<span style="font-family: 楷体, 楷体_GB2312, SimKai; color: rgb(255, 255, 0);">在绝美景致中，慢游和品茗</span>；<span style="font-family: 楷体, 楷体_GB2312, SimKai; color: rgb(255, 0, 0);">在天籁自然中，呼吸与奔跑</span>；<span style="font-family: 楷体, 楷体_GB2312, SimKai; color: rgb(112, 48, 160);">在宁谧夜色中，感悟人生</span>。</span></p><p style="line-height: 1.75em;"><span style="font-size: 16px; font-family: 楷体, 楷体_GB2312, SimKai;">欢迎到千里走单骑客栈，观天成，听天籁，品天香，探天干，悟天道……让心灵得到一份纯真的宁静。</span></p><p style="text-align: center; line-height: 1.75em;"></p>
+            </div>
+        </div>
+
+        
+    </div>
+    <!--end mui-content-->
+</div>
+
+<script src="../../../../../../cdn/static/wap/js/jquery-2.1.1.min.js"></script>
+<script>
+    $('.goback').click(function () {
+        window.history.back();
+    });
+    var ctx = "/jszx";
+</script>
+
+<script src="../../../../../../cdn/static/wap/js/mui.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/mui.picker.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/layer/layer.js"></script>
+<script src="../../../../../../cdn/static/wap/js/extension.js"></script>
+<script src="../../../../../../cdn/static/wap/js/vue.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/vue-infinite-scroll.js"></script>
+<script src="../../../../../../cdn/static/wap/js/axios.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/moment.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/moment-precise-range.js"></script>
+<script src="../../../../../../cdn/static/wap/js/js.cookie.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/swiper.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/lazysizes.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/wap-common.js"></script>
+
+<script src="../../../../../../cdn/static/wap/js/wechat-share.js"></script>
+<script src="../../../../../../open/js/jweixin-1.2.0.js"></script>
+
+
+<script>
+    var url = window.location.href;
+    if (url.indexOf("state=STATE") >= 0) {
+        var reg = /code=(.+)&/g;
+        url = url.replace(reg, "");
+        url = url.replace("state=STATE", "");
+        window.location.href = url;
+    }
+    /*微信分享数据*/
+    var ua = window.navigator.userAgent.toLowerCase();
+    if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+        var shareData = {};
+        shareData.title = "武夷山旅游集散中心";
+        shareData.desc = "武夷山旅游  新鲜的旅游资讯、好玩的旅行攻略、及时的出行提示，随时带您玩转武夷～";
+        shareData.img = "https://wys.zmyou.com/cdn/static/wap/img/share.png";
+        share(shareData);
+        $('header').css('display', 'block');
+    } else {
+        $('header').remove();
+        $('.mui-content').css("padding-top", "0px")
+    }
+    mui.back = function () {
+        if ("https://guide.wysly.com/jszx/wap/open/play/hotel/detail/33" == "") {
+            try {
+                //APP
+                phone.backLastView();
+            } catch (e) {
+                window.location.href = "/jszx/wap/open/index";
+            }
+        } else {
+            window.history.back(-1);
+        }
+    };
+</script>
+
+<script>
+
+</script>
+
+
+<script>
+    var vm = new Vue({
+        el: '#main',
+        data: {
+        },
+        mounted: function () {
+            new Swiper('.swiper-container', {
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'fraction',
+                    autoplay: true
+                }
+            });
+        },
+        methods: {
+        }
+    });
+</script>
+</body>
+</html>

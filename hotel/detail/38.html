@@ -1,0 +1,146 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/css/mui.min.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/css/mui.picker.min.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/css/datepicker.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/css/swiper.min.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/assets/css/wap-base.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/weixin-css/weixin.css">
+    <title>武夷美宿</title>
+</head>
+<body class="white-bg">
+<div id="main">
+    <div class="mui-content white-bg">
+        <a class="mui-action-back mui-icon mui-icon-left-nav s-back"></a>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                
+                    <div class="swiper-slide"><img src="../../../../../../upload/image/20221101/1667235125551asc.jpg" height="200px"></div>
+                
+                    <div class="swiper-slide"><img src="../../../../../../upload/image/20221101/1667235131029arl.jpg" height="200px"></div>
+                
+            </div>
+            
+                <div class="swiper-pagination"></div>
+            
+        </div>
+
+        <div class="text-box text-box-radius">
+            <p class="pb10 border-bottom" style="font-size: 24pt">溪景园度假别墅</p>
+            <div>
+                <p style="line-height: 1.75em;"><span style="color: rgb(51, 51, 51); letter-spacing: 0px; background: rgb(255, 255, 255); font-size: 16px; font-family: 楷体, 楷体_GB2312, SimKai;">&nbsp; &nbsp; <strong>武夷山溪景园度假别墅</strong>位于武夷山国家旅游度假区内（溪景园别墅区）,依崇阳溪而建，毗邻印象大红袍剧场（步行约5分钟），同大王峰，狮子峰隔溪相望。距进景区主路口（南次路口）、高铁公交枢纽站（三木总站）约3分钟车程,交通便利、地理位置优越。 这是一家集旅游、休闲度假、商务接待、公司团建、部门会议为一体的精品民宿，提供十余间七种布局房型选择，门口五百多亩生态竹海景观，270度视野自然山水风光，室内外茶席，豪华宴会厅（红木餐桌18人），棋牌室，私人KTV包厢，篮球场，羽毛球场和不同的公共区域铸成一座旅途中的私密后花园。 独栋别墅，电梯楼层，日立中央空调、AO史密斯中央热水器（24h热水）、TOTO卫浴，全自动马桶，进口沙比利·巴花原木家具，英国斯林百兰床垫，高星级床上用品及洗漱用品。入住武夷山溪景园精品民宿让武夷山的旅程放慢脚步、舒适的假期随之开启。让您寄情与山水之间，享受一个快乐无束的独特假期。 民宿奉行5S管理原则，为宾客提供温馨、高效、安全、环保、文明有序的服务体验，是您漫游武夷首选理想之地。</span></p><p><br></p>
+            </div>
+        </div>
+
+        
+    </div>
+    <!--end mui-content-->
+</div>
+
+<script src="../../../../../../cdn/static/wap/js/jquery-2.1.1.min.js"></script>
+<script>
+    $('.goback').click(function () {
+        window.history.back();
+    });
+    var ctx = "/jszx";
+</script>
+
+<script src="../../../../../../cdn/static/wap/js/mui.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/mui.picker.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/layer/layer.js"></script>
+<script src="../../../../../../cdn/static/wap/js/extension.js"></script>
+<script src="../../../../../../cdn/static/wap/js/vue.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/vue-infinite-scroll.js"></script>
+<script src="../../../../../../cdn/static/wap/js/axios.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/moment.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/moment-precise-range.js"></script>
+<script src="../../../../../../cdn/static/wap/js/js.cookie.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/swiper.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/lazysizes.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/wap-common.js"></script>
+
+<script src="../../../../../../cdn/static/wap/js/wechat-share.js"></script>
+<script src="../../../../../../open/js/jweixin-1.2.0.js"></script>
+
+
+<script>
+    var url = window.location.href;
+    if (url.indexOf("state=STATE") >= 0) {
+        var reg = /code=(.+)&/g;
+        url = url.replace(reg, "");
+        url = url.replace("state=STATE", "");
+        window.location.href = url;
+    }
+    /*微信分享数据*/
+    var ua = window.navigator.userAgent.toLowerCase();
+    if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+        var shareData = {};
+        shareData.title = "武夷山旅游集散中心";
+        shareData.desc = "武夷山旅游  新鲜的旅游资讯、好玩的旅行攻略、及时的出行提示，随时带您玩转武夷～";
+        shareData.img = "https://wys.zmyou.com/cdn/static/wap/img/share.png";
+        share(shareData);
+        $('header').css('display', 'block');
+    } else {
+        $('header').remove();
+        $('.mui-content').css("padding-top", "0px")
+    }
+    mui.back = function () {
+        if ("https://guide.wysly.com/jszx/wap/open/play/hotel/detail/38" == "") {
+            try {
+                //APP
+                phone.backLastView();
+            } catch (e) {
+                window.location.href = "/jszx/wap/open/index";
+            }
+        } else {
+            window.history.back(-1);
+        }
+    };
+</script>
+
+<script>
+
+</script>
+
+
+<script>
+    var vm = new Vue({
+        el: '#main',
+        data: {
+        },
+        mounted: function () {
+            new Swiper('.swiper-container', {
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'fraction',
+                    autoplay: true
+                }
+            });
+        },
+        methods: {
+        }
+    });
+</script>
+</body>
+</html>

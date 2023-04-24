@@ -1,0 +1,146 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/css/mui.min.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/css/mui.picker.min.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/css/datepicker.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/css/swiper.min.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/assets/css/wap-base.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/weixin-css/weixin.css">
+    <title>武夷美宿</title>
+</head>
+<body class="white-bg">
+<div id="main">
+    <div class="mui-content white-bg">
+        <a class="mui-action-back mui-icon mui-icon-left-nav s-back"></a>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                
+                    <div class="swiper-slide"><img src="../../../../../../upload/image/20221101/1667235506125pvk.jpg" height="200px"></div>
+                
+                    <div class="swiper-slide"><img src="../../../../../../upload/image/20221101/1667235509090wja.jpg" height="200px"></div>
+                
+            </div>
+            
+                <div class="swiper-pagination"></div>
+            
+        </div>
+
+        <div class="text-box text-box-radius">
+            <p class="pb10 border-bottom" style="font-size: 24pt">武夷山十二月山舍客栈</p>
+            <div>
+                <p style="line-height: 1.75em;"><span style="color: rgb(51, 51, 51); font-family: Tahoma, Simsun, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);">&nbsp; &nbsp; &nbsp; <strong><span style="color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); font-size: 16px; font-family: 楷体, 楷体_GB2312, SimKai;">武夷山十二月山舍客栈</span></strong><span style="color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); font-size: 16px; font-family: 楷体, 楷体_GB2312, SimKai;">位于武夷山南源岭，临近景区南入口，客栈房型包括标准件、大床房、亲子房、复式套房等各种房型，适于家庭出游、公司小团团建、伴侣出行等。新中式的优雅布局，令顾客有一个更具格调的旅程。同时，民宿提供餐饮（含早）服务、订票服务、包车服务、叫早服务、等多项针对游客的一对一贴心服务。<span style="background-color: rgb(255, 255, 255); font-size: 16px; font-family: 楷体, 楷体_GB2312, SimKai; color: rgb(255, 0, 0);">高档的设施设备给予客人最舒适的环境，贴心的细致服务令客人宾至如归</span>。<span style="background-color: rgb(255, 255, 255); font-size: 16px; font-family: 楷体, 楷体_GB2312, SimKai; color: rgb(0, 176, 240);">武夷山十二月山舍，一个放空灵魂的归处</span>。</span></span></p><p style="text-align: center;"><span style="color: rgb(51, 51, 51); font-family: Tahoma, Simsun, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);"></span></p>
+            </div>
+        </div>
+
+        
+    </div>
+    <!--end mui-content-->
+</div>
+
+<script src="../../../../../../cdn/static/wap/js/jquery-2.1.1.min.js"></script>
+<script>
+    $('.goback').click(function () {
+        window.history.back();
+    });
+    var ctx = "/jszx";
+</script>
+
+<script src="../../../../../../cdn/static/wap/js/mui.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/mui.picker.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/layer/layer.js"></script>
+<script src="../../../../../../cdn/static/wap/js/extension.js"></script>
+<script src="../../../../../../cdn/static/wap/js/vue.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/vue-infinite-scroll.js"></script>
+<script src="../../../../../../cdn/static/wap/js/axios.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/moment.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/moment-precise-range.js"></script>
+<script src="../../../../../../cdn/static/wap/js/js.cookie.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/swiper.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/lazysizes.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/wap-common.js"></script>
+
+<script src="../../../../../../cdn/static/wap/js/wechat-share.js"></script>
+<script src="../../../../../../open/js/jweixin-1.2.0.js"></script>
+
+
+<script>
+    var url = window.location.href;
+    if (url.indexOf("state=STATE") >= 0) {
+        var reg = /code=(.+)&/g;
+        url = url.replace(reg, "");
+        url = url.replace("state=STATE", "");
+        window.location.href = url;
+    }
+    /*微信分享数据*/
+    var ua = window.navigator.userAgent.toLowerCase();
+    if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+        var shareData = {};
+        shareData.title = "武夷山旅游集散中心";
+        shareData.desc = "武夷山旅游  新鲜的旅游资讯、好玩的旅行攻略、及时的出行提示，随时带您玩转武夷～";
+        shareData.img = "https://wys.zmyou.com/cdn/static/wap/img/share.png";
+        share(shareData);
+        $('header').css('display', 'block');
+    } else {
+        $('header').remove();
+        $('.mui-content').css("padding-top", "0px")
+    }
+    mui.back = function () {
+        if ("https://guide.wysly.com/jszx/wap/open/play/hotel/detail/34" == "") {
+            try {
+                //APP
+                phone.backLastView();
+            } catch (e) {
+                window.location.href = "/jszx/wap/open/index";
+            }
+        } else {
+            window.history.back(-1);
+        }
+    };
+</script>
+
+<script>
+
+</script>
+
+
+<script>
+    var vm = new Vue({
+        el: '#main',
+        data: {
+        },
+        mounted: function () {
+            new Swiper('.swiper-container', {
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'fraction',
+                    autoplay: true
+                }
+            });
+        },
+        methods: {
+        }
+    });
+</script>
+</body>
+</html>

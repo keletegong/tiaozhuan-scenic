@@ -1,0 +1,146 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/css/mui.min.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/css/mui.picker.min.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/css/datepicker.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/css/swiper.min.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/assets/css/wap-base.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/weixin-css/weixin.css">
+    <title>武夷美购</title>
+</head>
+<body class="white-bg">
+<div id="main">
+    <div class="mui-content white-bg">
+        <a class="mui-action-back mui-icon mui-icon-left-nav s-back"></a>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                
+                    <div class="swiper-slide"><img src="../../../../../../upload/image/20221101/1667237260921iyr.jpg" height="200px"></div>
+                
+                    <div class="swiper-slide"><img src="../../../../../../upload/image/20221101/1667237263104qvs.jpg" height="200px"></div>
+                
+            </div>
+            
+                <div class="swiper-pagination"></div>
+            
+        </div>
+
+        <div class="text-box text-box-radius">
+            <p class="pb10 border-bottom" style="font-size: 24pt">肉桂</p>
+            <div>
+                <p style="color: rgb(100, 100, 100); text-indent: 2em; line-height: 1.75em;"><span style="font-size: 14px;">树高者达１.６米，冠１米，干粗３厘米。枝条向上伸展略扩张。枝叶颇密，叶厚而脆呈浓绿色，叶片光滑，叶缘内翻成瓦筒状，叶尖较钝，椭圆形。叶脉细而隐。萌芽力强。花甚多，花朵小。成品茶外形紧结，色泽青褐鲜润。香极高锐，有明显的桂皮香味，佳者带乳香，有诱人之感，香气久泡尤存。味鲜滑甘润，汤色橙黄清澈，叶底黄亮，红点鲜明，但不很耐泡。<strong>肉桂又名玉桂，是武夷岩茶名丛之一。</strong></span></p><p style="color: rgb(100, 100, 100); text-indent: 0em; line-height: 1.75em;"><img src="../../../../../../upload/ueditor/image/20221101/1667237276315079345.jpg" title="1667237276315079345.jpg" alt="src=http___images.szhaf.com_p_7494_933b3bfc8dfa367ad7b241e8a2de49ce.jpg&amp;refer=http___images.szhaf.webp.jpg"></p><p style="color: rgb(100, 100, 100); text-indent: 2em; line-height: 1.75em;"><span style="font-size: 14px;"></span><span style="font-size: 14px;">武夷山市区、度假区各大超市及土特产专卖店均有销售。</span></p>
+            </div>
+        </div>
+
+
+        
+    </div>
+    <!--end mui-content-->
+</div>
+
+<script src="../../../../../../cdn/static/wap/js/jquery-2.1.1.min.js"></script>
+<script>
+    $('.goback').click(function () {
+        window.history.back();
+    });
+    var ctx = "/jszx";
+</script>
+
+<script src="../../../../../../cdn/static/wap/js/mui.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/mui.picker.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/layer/layer.js"></script>
+<script src="../../../../../../cdn/static/wap/js/extension.js"></script>
+<script src="../../../../../../cdn/static/wap/js/vue.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/vue-infinite-scroll.js"></script>
+<script src="../../../../../../cdn/static/wap/js/axios.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/moment.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/moment-precise-range.js"></script>
+<script src="../../../../../../cdn/static/wap/js/js.cookie.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/swiper.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/lazysizes.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/wap-common.js"></script>
+
+<script src="../../../../../../cdn/static/wap/js/wechat-share.js"></script>
+<script src="../../../../../../open/js/jweixin-1.2.0.js"></script>
+
+
+<script>
+    var url = window.location.href;
+    if (url.indexOf("state=STATE") >= 0) {
+        var reg = /code=(.+)&/g;
+        url = url.replace(reg, "");
+        url = url.replace("state=STATE", "");
+        window.location.href = url;
+    }
+    /*微信分享数据*/
+    var ua = window.navigator.userAgent.toLowerCase();
+    if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+        var shareData = {};
+        shareData.title = "武夷山旅游集散中心";
+        shareData.desc = "武夷山旅游  新鲜的旅游资讯、好玩的旅行攻略、及时的出行提示，随时带您玩转武夷～";
+        shareData.img = "https://wys.zmyou.com/cdn/static/wap/img/share.png";
+        share(shareData);
+        $('header').css('display', 'block');
+    } else {
+        $('header').remove();
+        $('.mui-content').css("padding-top", "0px")
+    }
+    mui.back = function () {
+        if ("https://guide.wysly.com/jszx/wap/open/play/goods/detail/11" == "") {
+            try {
+                //APP
+                phone.backLastView();
+            } catch (e) {
+                window.location.href = "/jszx/wap/open/index";
+            }
+        } else {
+            window.history.back(-1);
+        }
+    };
+</script>
+
+<script>
+
+</script>
+
+
+<script>
+    var vm = new Vue({
+        el: '#main',
+        data: {
+        },
+        mounted: function () {
+            new Swiper('.swiper-container', {
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'fraction',
+                    autoplay: true
+                }
+            });
+        },
+        methods: {}
+    });
+</script>
+</body>
+</html>

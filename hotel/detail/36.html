@@ -1,0 +1,146 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/css/mui.min.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/css/mui.picker.min.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/css/datepicker.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/css/swiper.min.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/assets/css/wap-base.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/weixin-css/weixin.css">
+    <title>武夷美宿</title>
+</head>
+<body class="white-bg">
+<div id="main">
+    <div class="mui-content white-bg">
+        <a class="mui-action-back mui-icon mui-icon-left-nav s-back"></a>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                
+                    <div class="swiper-slide"><img src="../../../../../../upload/image/20221101/1667235311088kis.jpg" height="200px"></div>
+                
+                    <div class="swiper-slide"><img src="../../../../../../upload/image/20221101/1667235314305ajm.jpg" height="200px"></div>
+                
+            </div>
+            
+                <div class="swiper-pagination"></div>
+            
+        </div>
+
+        <div class="text-box text-box-radius">
+            <p class="pb10 border-bottom" style="font-size: 24pt">引溪别院</p>
+            <div>
+                <p><span style="font-size:19px;font-family:仿宋_GB2312;letter-spacing:-1px">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="letter-spacing: -1px; font-size: 16px; font-family: 楷体, 楷体_GB2312, SimKai;">引溪别院坐落于武夷山风景名胜区脚下崇阳溪畔与大王峰遥遥相望，引溪别院拥有客房13间，各类服务设施齐全，客房“干净”、“清新”、“温馨”，整个民宿装修风格偏温馨色调，舒服一定是第一感觉。民宿内有各种色系元素，比如像白色吊椅，绿色植物，绿色的墙壁，小碎石地板，以及各种文艺森系的小图标。别院带独立小院，院内新中式建筑风格，传统艺术加入大胆而现代的装饰，与千篇一律的中式酒店形成鲜明的对比。在厅内喝喝茶听听音乐，在院内沐浴阳光，打打牌休憩一小会儿，出门就是一条潺潺流水的小溪， 在这里你还可以牵着心爱人的手，沿着幽静的溪间步道，漫步于此，傍晚一起看看日落，何尝不是一种幸福.</span></span></p><p><span style="font-size:19px;font-family:仿宋_GB2312;letter-spacing:-1px"><br></span></p>
+            </div>
+        </div>
+
+        
+    </div>
+    <!--end mui-content-->
+</div>
+
+<script src="../../../../../../cdn/static/wap/js/jquery-2.1.1.min.js"></script>
+<script>
+    $('.goback').click(function () {
+        window.history.back();
+    });
+    var ctx = "/jszx";
+</script>
+
+<script src="../../../../../../cdn/static/wap/js/mui.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/mui.picker.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/layer/layer.js"></script>
+<script src="../../../../../../cdn/static/wap/js/extension.js"></script>
+<script src="../../../../../../cdn/static/wap/js/vue.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/vue-infinite-scroll.js"></script>
+<script src="../../../../../../cdn/static/wap/js/axios.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/moment.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/moment-precise-range.js"></script>
+<script src="../../../../../../cdn/static/wap/js/js.cookie.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/swiper.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/lazysizes.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/wap-common.js"></script>
+
+<script src="../../../../../../cdn/static/wap/js/wechat-share.js"></script>
+<script src="../../../../../../open/js/jweixin-1.2.0.js"></script>
+
+
+<script>
+    var url = window.location.href;
+    if (url.indexOf("state=STATE") >= 0) {
+        var reg = /code=(.+)&/g;
+        url = url.replace(reg, "");
+        url = url.replace("state=STATE", "");
+        window.location.href = url;
+    }
+    /*微信分享数据*/
+    var ua = window.navigator.userAgent.toLowerCase();
+    if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+        var shareData = {};
+        shareData.title = "武夷山旅游集散中心";
+        shareData.desc = "武夷山旅游  新鲜的旅游资讯、好玩的旅行攻略、及时的出行提示，随时带您玩转武夷～";
+        shareData.img = "https://wys.zmyou.com/cdn/static/wap/img/share.png";
+        share(shareData);
+        $('header').css('display', 'block');
+    } else {
+        $('header').remove();
+        $('.mui-content').css("padding-top", "0px")
+    }
+    mui.back = function () {
+        if ("https://guide.wysly.com/jszx/wap/open/play/hotel/detail/36" == "") {
+            try {
+                //APP
+                phone.backLastView();
+            } catch (e) {
+                window.location.href = "/jszx/wap/open/index";
+            }
+        } else {
+            window.history.back(-1);
+        }
+    };
+</script>
+
+<script>
+
+</script>
+
+
+<script>
+    var vm = new Vue({
+        el: '#main',
+        data: {
+        },
+        mounted: function () {
+            new Swiper('.swiper-container', {
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'fraction',
+                    autoplay: true
+                }
+            });
+        },
+        methods: {
+        }
+    });
+</script>
+</body>
+</html>

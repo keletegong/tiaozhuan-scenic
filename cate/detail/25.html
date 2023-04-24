@@ -1,0 +1,143 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/css/mui.min.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/css/mui.picker.min.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/css/datepicker.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/css/swiper.min.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/assets/css/wap-base.css">
+<link rel="stylesheet" href="../../../../../../cdn/static/wap/weixin-css/weixin.css">
+    <title>武夷美食</title>
+</head>
+<body class="white-bg">
+<div id="main">
+    <div class="mui-content white-bg">
+        <a class="mui-action-back mui-icon mui-icon-left-nav s-back"></a>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                
+                    <div class="swiper-slide"><img src="../../../../../../upload/image/20221101/1667236890409sid.jpeg" height="200px"></div>
+                
+            </div>
+            
+                <div class="swiper-pagination"></div>
+            
+        </div>
+
+        <div class="text-box text-box-radius">
+            <p class="pb10 border-bottom" style="font-size: 14pt">武夷茶晏</p>
+            <div>
+                <p style="margin: 0px; line-height: 1.75em;"><span style="margin: 0px; font-family: 宋体; font-size: 12pt;"><span style="font-family:宋体">&nbsp; &nbsp;</span><span style="margin: 0px; font-size: 12pt; font-family: 楷体, 楷体_GB2312, SimKai;"> 武夷山盛产岩茶，而且历史悠久，品质优异，独具“岩骨花香之胜”。武夷茶宴，就地取材，在名厨好手的不断探索与实践中选优汰劣，荟萃而成宴席之一款。武夷茶宴起始于上世纪90年代，武夷茶宴在选取茶叶上，并不局限于红茶和乌龙茶中精品的岩茶，也把绿茶纳入菜肴。这样，能根据客人脾胃的温凉调适，绿茶性凉，红茶火厚，乌龙茶不凉不火，各取所需。</span></span></p><p style="margin: 0px; text-align: left; text-indent: 24pt; line-height: 1.75em;"><span style="margin: 0px; line-height: 150%; font-size: 12pt; font-family: 楷体, 楷体_GB2312, SimKai;"><span style="margin: 0px; line-height: 150%; font-size: 12pt;">武夷茶宴是利用现代烹饪技术制作，方法繁多，蒸熘爆炒焖炖都能派上用场。或利用茶汁，或利用青叶，或以茶为主料，或为配料，不一而足。武夷茶面，取茶青汁和面擀制，面色清绿，入口清香，柔韧绵软，味道好极。凡到过武夷山的游客，无一不为清新淡雅的茶宴而倾倒。茶宴之所以深受欢迎，除了暗合绿色生态食品走俏的风潮外，还在于茶有提神、健胃、帮助消化、减肥、美容等功效。</span><br><span style="margin: 0px; line-height: 150%; font-size: 12pt;">&nbsp; &nbsp; 当地很有代表性的是武夷山庄的茶宴，共有什锦彩蝶、金炸石磷、正山锦鸡、上汤馄饨、凉拌茶面、碧螺生鱼、老丛烧排等</span>18道，无一不茶，或飘或藏着淡淡的茶香。</span></p><p><br></p>
+            </div>
+        </div>
+
+        
+    </div>
+</div>
+
+<script src="../../../../../../cdn/static/wap/js/jquery-2.1.1.min.js"></script>
+<script>
+    $('.goback').click(function () {
+        window.history.back();
+    });
+    var ctx = "/jszx";
+</script>
+
+<script src="../../../../../../cdn/static/wap/js/mui.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/mui.picker.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/layer/layer.js"></script>
+<script src="../../../../../../cdn/static/wap/js/extension.js"></script>
+<script src="../../../../../../cdn/static/wap/js/vue.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/vue-infinite-scroll.js"></script>
+<script src="../../../../../../cdn/static/wap/js/axios.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/moment.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/moment-precise-range.js"></script>
+<script src="../../../../../../cdn/static/wap/js/js.cookie.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/swiper.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/lazysizes.min.js"></script>
+<script src="../../../../../../cdn/static/wap/js/wap-common.js"></script>
+
+<script src="../../../../../../cdn/static/wap/js/wechat-share.js"></script>
+<script src="../../../../../../open/js/jweixin-1.2.0.js"></script>
+
+
+<script>
+    var url = window.location.href;
+    if (url.indexOf("state=STATE") >= 0) {
+        var reg = /code=(.+)&/g;
+        url = url.replace(reg, "");
+        url = url.replace("state=STATE", "");
+        window.location.href = url;
+    }
+    /*微信分享数据*/
+    var ua = window.navigator.userAgent.toLowerCase();
+    if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+        var shareData = {};
+        shareData.title = "武夷山旅游集散中心";
+        shareData.desc = "武夷山旅游  新鲜的旅游资讯、好玩的旅行攻略、及时的出行提示，随时带您玩转武夷～";
+        shareData.img = "https://wys.zmyou.com/cdn/static/wap/img/share.png";
+        share(shareData);
+        $('header').css('display', 'block');
+    } else {
+        $('header').remove();
+        $('.mui-content').css("padding-top", "0px")
+    }
+    mui.back = function () {
+        if ("https://guide.wysly.com/jszx/wap/open/play/cate/detail/25" == "") {
+            try {
+                //APP
+                phone.backLastView();
+            } catch (e) {
+                window.location.href = "/jszx/wap/open/index";
+            }
+        } else {
+            window.history.back(-1);
+        }
+    };
+</script>
+
+<script>
+
+</script>
+
+
+<script>
+    var vm = new Vue({
+        el: '#main',
+        data: {
+        },
+        mounted: function () {
+            new Swiper('.swiper-container', {
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'fraction',
+                    autoplay: true
+                }
+            });
+        },
+        methods: {
+        }
+    });
+</script>
+</body>
+</html>
